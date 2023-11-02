@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Centered Buttons</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            /* height: 100%; */
+            z-index: -1;
+            overflow: hidden; /* Hide overflow content */
+        }
+        
+        #myVideo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .button-container {
+            text-align: center;
+        }
+
+        .button {
+            padding: 20px 40px;;
+            font-size: 28px;
+            text-align: center;
+            cursor: pointer;
+            outline: none;
+            color: #fff;
+            background-color: #3498db;
+            border: none;
+            border-radius: 5px;
+            margin: 10px;
+            border-radius: 15px;
+    box-shadow: 0 9px #999;
+            transition: background-color 0.3s;
+        }
+
+        .buttoN:hover {
+            background-color: #5e2e68;
+        }
+        
+        .button:active {
+            background-color: #6a589b;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="video-container">
+        <video autoplay muted loop id="myVideo" autoplay loop>
+            <source src="home.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="button-container">
+        <button class="button"><b>PROFILE</b></button>
+        <button class="button"><b>BUS iNFORMATION</b></button>
+        <button class="button"><b>DRIVER INFORMATION</b></button>
+        <button class="button"><b>ADMINISTRASION</b></button>
+        <button class="button"><b>TRACK BUS</b></button>
+        <button class="button"><b>RESERVE SIT</b></button>
+        <button class="button"><b>MESSAGE</b></button>
+        <button class="button"><b>CHANGE PASSWORD</b></button>
+    </div>
+</body>
+
+</html>
+
+
+        
+        
+      
