@@ -1,36 +1,40 @@
 <!DOCTYPE html>
-<html class="no-js"> 
+<html class="no-js">
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="login_student.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    </head>
-    <body>
-      <div class="bg"></div>
-        <div class="login_form_container">
-            <div class="login_form">
-              <h2>STUDENT LOGIN</h2>
-              <div class="input_group">
-                <i class="fa fa-user"></i>
-                <input type="text"  placeholder="ID" class="input_text" autocomplete="off"/>
-              </div>
-              <div class="input_group">
-                <i class="fa fa-unlock-alt"></i>
-                <input type="password" placeholder="Password" class="input_text" autocomplete="off"/>
-              </div>
-              <div class="button_group" id="login_button">
-                <a>Submit</a>
-              </div>
-      
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-          <script src="script.js"></script>
-        
 
-        
-    </body>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="login_admin.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+  <div class="bg"></div>
+  <div class="login_form_container">
+    <div class="login_form">
+      <h2>Student Login</h2>
+      <div class="input_group">
+        <i class="fa fa-user"></i>
+        <input id="username" type="text" placeholder="ID" class="input_text" autocomplete="off" />
+      </div>
+      <div class="input_group">
+        <i class="fa fa-unlock-alt"></i>
+        <input id="password" type="password" placeholder="Password" class="input_text" autocomplete="off" />
+      </div>
+      <div class="button_group" id="login_button">
+        <a id="submit">Submit</a>
+      </div>
+      <div id="error_message" class="error_message"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script>
+    setupLogin('/loginStudent'); 
+  </script>
+</body>
+
 </html>
