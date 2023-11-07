@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html class="no-js"> 
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="driver.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    </head>
+    <body>
+
+        <div id="video-container">
+            <video autoplay muted loop id="myVideo" autoplay loop>
+                <source src="driver.mp4" type="video/mp4">
+            </video>
+        </div>
+
+
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+        <div id="tableContainer">
+            <table id="myTable">
+                <tr class="header">
+                    <th style="width:60%;">NAME</th>
+                    <th style="width:40%;">DRIVER</th>
+                    <th style="width:40%;">PHONE</th>
+                  </tr>
+                  <tr>
+                <td>Prof. Dr. Mahi Uddin</td>
+                <td>Chairman (in-charge)</td>
+                <td>01812181704</td>
+              </tr>
+              <tr>
+                <td>Mr. Md. Akhter Hossain</td>
+                <td>Deputy Director</td>
+                <td>Tel: +8802334461900-7, PABX: Ext: 368,Mobile: 01925-885399</td>
+              </tr>
+              <tr>
+                <td>Mr. Md. Mahfuzul Islam Chyt</td>
+                <td>Senior Assistant Director</td>
+                <td>Tel: +8802334461900-7, PABX: 361, Mobile: 01718-447177</td>
+              </tr>
+              <tr>
+                <td>Mr. Abdullah Al Arif</td>
+                <td>Assistant Director</td>
+                <td>Tel: +8802334461900-7, PABX: 378, Mobile-01721-580537</td>
+              </tr>
+              <tr>
+                <td>MMr. Riaz Uddin Ahmed</td>
+                <td>Assistant Director</td>
+                <td>Tel: +8802334461900-7, PABX: 378, Mobile-01818253195</td>
+              </tr>
+              <tr>
+                <td>Mr. Mohammad Ashraf Hossain</td>
+                <td>Assistant Director</td>
+                <td>Tel: +8802334461900-7, PABX: 378, Mobile-01711-356533</td>
+              </tr>
+              <tr>
+                <td>Mr. Md. Shah Alam Miah</td>
+                <td>Sub Assistant Engineer</td>
+                <td>Mobile: 01882777648, 01731118948</td>
+              </tr>
+              <tr>
+                <td>Mr. Belal Uddin</td>
+                <td>Administraive Office</td>
+                <td>Tel: +8802334461900-7, PABX Ext: 378, Mobile: 01816452588</td>
+              </tr>
+              <tr>
+                <td>Mr. Jabedulla Bin Rashid</td>
+                <td>Administraive Assistant</td>
+                <td>Mobile: 01818288049</td>
+              </tr>
+              <tr>
+                <td>Mr. Habib Hosen</td>
+                <td>Administraive Assistant</td>
+                <td>018765345</td>
+              </tr>
+              <tr>
+</table>
+</div>
+
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+
+    </body>
+    </html>

@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("9.png");
+    background-size: cover;
+    display: flex; /* Add a flex container to align cards horizontally */
+    justify-content: center; /* Center the cards horizontally */
+}
+
+.card, .card2, .card3 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: 10px; /* Add some margin to separate the cards */
+    text-align: center;
+    font-family: arial;
+    flex: 1; /* Distribute the available width equally among the cards */
+}
+
+.title {
+    color: grey;
+    font-size: 18px;
+}
+
+button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+}
+
+button:hover, a:hover {
+    opacity: 0.7;
+}

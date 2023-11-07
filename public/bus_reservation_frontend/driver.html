@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html class="no-js"> 
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="driver.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    </head>
+    <body>
+
+        <div id="video-container">
+            <video autoplay muted loop id="myVideo" autoplay loop>
+                <source src="driver.mp4" type="video/mp4">
+            </video>
+        </div>
+
+
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+        <div id="tableContainer">
+<table id="myTable">
+    <tr class="header">
+        <th style="width:60%;">NAME</th>
+        <th style="width:40%;">DRIVER</th>
+        <th style="width:40%;">PHONE</th>
+      </tr>
+      <tr>
+        <td>Hathazari College</td>
+        <td>Jasim Uddin</td>
+        <td>01870065234</td>
+      </tr>
+      <tr>
+        <td>Baroyarhat</td>
+        <td>kalam uddin</td>
+        <td>01876432098</td>
+      </tr>
+      <tr>
+        <td>Dider Market</td>
+        <td>Salam Khan</td>
+        <td>01678954023</td>
+      </tr>
+      <tr>
+        <td>Navy Hospital gate</td>
+        <td>Rofiq Islam</td>
+        <td>01890567904</td>
+      </tr>
+      <tr>
+        <td>Mailer Matha</td>
+        <td>Mohin Uddin</td>
+        <td>01876590876</td>
+      </tr>
+      <tr>
+        <td>BOT</td>
+        <td>Akash Khan</td>
+        <td>01678900885</td>
+      </tr>
+      <tr>
+        <td>Boro Dighir Par</td>
+        <td>Tomal Uddin</td>
+        <td>01600456991</td>
+      </tr>
+      <tr>
+        <td>Chatteswari</td>
+        <td>Saif Islam </td>
+        <td>01877123400</td>
+      </tr>
+      <tr>
+        <td>Koibolyodham</td>
+        <td>Rimon Khan </td>
+        <td>01655098331</td>
+      </tr>
+      <tr>
+        <td>Oxygen Moor</td>
+        <td>Mahi Uddin</td>
+        <td>01877709432</td>
+      </tr>
+      <tr>
+        <td>GEC</td>
+        <td>Tazbi Khan</td>
+        <td>01870073454</td>
+      </tr>
+      <tr>
+        <td>Kaptai rastar Matha</td>
+        <td>Tafim Khan</td>
+        <td>01877002367</td>
+      </tr>
+      <tr>
+        <td>Lucky Plaza</td>
+        <td>Saidul Uddin</td>
+        <td>01688037609</td>
+      </tr>
+      <tr>
+        <td>Kotowali</td>
+        <td>Sohid Islam</td>
+        <td>01811008765</td>
+      </tr>
+</table>
+</div>
+
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+
+    </body>
+    </html>
