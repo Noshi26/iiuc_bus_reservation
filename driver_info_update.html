@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML Table With Edit Section</title>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Link CSS -->
+        <link rel="stylesheet" href="driver_info_update.css">
+    </head>
+    <body>
+
+        <!-- Main Data Table -->
+        <div class="mainTable">
+            <h1>Data</h1>
+            <table id="table" border="1">
+                
+                <tr>
+                    <th>Sno</th>
+                    <th>Name</th>
+                    <th>Mobile number</th>
+                </tr>
+                
+                <tr>
+                    <td>01</td>
+                    <td>Jasim Uddin </td>
+                    <td>01870065234</td>
+                </tr>
+                
+                <tr>
+                    <td>02</td>
+                    <td>kalam uddin </td>
+                    <td>987654321</td>
+                </tr>
+                
+                <tr>
+                    <td>03</td>
+                    <td>kalam uddin </td>
+                    <td>01876432098</td>
+                
+                <tr>
+                    <td>04</td>
+                    <td>Salam Khan  </td>
+                    <td>0167895402301</td>
+                </tr>
+                
+                <tr>
+                    <td>05</td>
+                    <td>Rofiq Islam </td>
+                    <td>01890567904</td>
+                </tr>
+                
+                <tr>
+                    <td>06</td>
+                    <td>Mohin Uddin </td>
+                    <td>01876590876</td>
+                </tr>
+                
+                <tr>
+                    <td>07</td>
+                    <td>Akash Khan </td>
+                    <td>01678900885</td>
+                </tr>
+                
+                <tr>
+                    <td>08</td>
+                    <td>Tomal Uddin </td>
+                    <td>01655098331
+                
+                <tr>
+                    <td>09</td>
+                    <td>Saidul Uddin </td>
+                    <td>01688037609</td>
+                
+            </table>
+        </div>
+
+
+        <!-- Update Button -->
+        <div class="updateBtn">
+            <button  onclick="editTableDisplay()">Update data</button>
+        </div>
+
+        <!-- Edit table -->
+        <div class="editTable">
+            <div class="left">Name: </div><div class="right"><input type="text" name="name" id="name"></div><br><br>
+            <div class="left">Mobile number: </div><div class="right"><input type="number" name="mNumber" id="mNumber"></div><br><br>
+            <button onclick="editRow();" class="editRowBtn">Update</button><br><br>
+        </div>        
+
+        <!-- link JavaScript -->
+        <script src="driverupdate_script.js"></script>
+    </body>
+</html>
